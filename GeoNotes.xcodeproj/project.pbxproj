@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		09A3F75320ADF4710087A3A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A3F75220ADF4710087A3A1 /* AppDelegate.swift */; };
-		09A3F75520ADF4710087A3A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A3F75420ADF4710087A3A1 /* ViewController.swift */; };
 		09A3F75820ADF4710087A3A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A3F75620ADF4710087A3A1 /* Main.storyboard */; };
 		09A3F75B20ADF4710087A3A1 /* GeoNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09A3F75920ADF4710087A3A1 /* GeoNotes.xcdatamodeld */; };
 		09A3F75D20ADF4710087A3A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A3F75C20ADF4710087A3A1 /* Assets.xcassets */; };
 		09A3F76020ADF4710087A3A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A3F75E20ADF4710087A3A1 /* LaunchScreen.storyboard */; };
+		09A3F76820ADF4C70087A3A1 /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A3F76720ADF4C70087A3A1 /* NewNoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		09A3F74F20ADF4710087A3A1 /* GeoNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A3F75220ADF4710087A3A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		09A3F75420ADF4710087A3A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		09A3F75720ADF4710087A3A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09A3F75A20ADF4710087A3A1 /* GeoNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GeoNotes.xcdatamodel; sourceTree = "<group>"; };
 		09A3F75C20ADF4710087A3A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09A3F75F20ADF4710087A3A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09A3F76120ADF4710087A3A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09A3F76720ADF4C70087A3A1 /* NewNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				09A3F75220ADF4710087A3A1 /* AppDelegate.swift */,
-				09A3F75420ADF4710087A3A1 /* ViewController.swift */,
 				09A3F75620ADF4710087A3A1 /* Main.storyboard */,
+				09A3F76720ADF4C70087A3A1 /* NewNoteViewController.swift */,
 				09A3F75C20ADF4710087A3A1 /* Assets.xcassets */,
 				09A3F75E20ADF4710087A3A1 /* LaunchScreen.storyboard */,
 				09A3F76120ADF4710087A3A1 /* Info.plist */,
@@ -140,9 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09A3F75520ADF4710087A3A1 /* ViewController.swift in Sources */,
 				09A3F75B20ADF4710087A3A1 /* GeoNotes.xcdatamodeld in Sources */,
 				09A3F75320ADF4710087A3A1 /* AppDelegate.swift in Sources */,
+				09A3F76820ADF4C70087A3A1 /* NewNoteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
