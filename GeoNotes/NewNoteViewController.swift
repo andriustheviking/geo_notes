@@ -6,7 +6,10 @@
 //  Copyright © 2018 Andrius Kelly. All rights reserved.
 //
 
+
+
 import UIKit
+import CoreData
 
 class NewNoteViewController: UIViewController {
 
@@ -29,8 +32,16 @@ class NewNoteViewController: UIViewController {
             return
         }
         
+        //get context to create note object
+        let dbContext =  (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let note = Note(context:dbContext)
+        note.text = text
+        //save note
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
+        let _ = navigationController?.popViewController(animated: true)
     }
 
+    
 
   }
