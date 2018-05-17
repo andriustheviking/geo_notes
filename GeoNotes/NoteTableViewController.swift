@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import CoreLocation
 
 
 //coredata/tableview implimentation from https://www.bobthedeveloper.io/blog/beginner-guide-to-core-data-in-swift
 
 
 class NoteTableViewController: UITableViewController {
-
+    
     let dbContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var notes: [Note] = []
@@ -54,7 +55,10 @@ class NoteTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         //fix this
-        return 69
+        return UITableViewAutomaticDimension
+    }
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     
     //allow for deletion

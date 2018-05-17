@@ -50,26 +50,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="NH4-mr-UC3">
-                                <rect key="frame" x="50" y="189" width="314" height="409.33333333333337"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NH4-mr-UC3">
+                                <rect key="frame" x="50" y="139" width="314" height="522"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuo-yb-gc0">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="31.333333333333343"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KHb-Ec-Rzp">
-                                        <rect key="frame" x="0.0" y="181.33333333333331" width="314" height="30"/>
+                                        <rect key="frame" x="0.0" y="235" width="314" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="iwF-ev-4Ew"/>
+                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCu-Dk-SE5">
-                                        <rect key="frame" x="0.0" y="361.33333333333337" width="314" height="48"/>
+                                        <rect key="frame" x="0.0" y="474" width="314" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Submit">
-                                            <color key="titleColor" red="0.10732516646385193" green="0.82352685928344727" blue="0.42032897472381592" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.15019240975379944" green="0.88532805442810059" blue="0.37943422794342041" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="submitNote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fIB-qz-jwc"/>
@@ -86,9 +89,10 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.92884857381275177" green="0.92884857381275177" blue="0.92884857381275177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.91692009226912763" green="0.91692009226912763" blue="0.91692009226912763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NH4-mr-UC3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="125" id="G19-WL-rmL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NH4-mr-UC3" secondAttribute="bottom" constant="75" id="FTA-Lg-jOf"/>
+                            <constraint firstItem="NH4-mr-UC3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="G19-WL-rmL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NH4-mr-UC3" secondAttribute="trailing" constant="30" id="ieH-K3-0ii"/>
                             <constraint firstItem="NH4-mr-UC3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="mc0-bG-Q2N"/>
                         </constraints>

@@ -10,16 +10,31 @@
 
 import UIKit
 import CoreData
+import CoreLocation
 
-class NewNoteViewController: UIViewController {
+
+fileprivate let OSUCoordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(44.5 ), longitude: CLLocationDegrees(-123.2 ))
+
+
+class NewNoteViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var noteText: UITextField!
     
+
+    //location manager implimentation: https://www.hackingwithswift.com/read/22/2/requesting-location-core-location
+    var locationManager: CLLocationManager!
+    
+    var currentLocation = OSUCoordinate
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        locationManager = CLLocationManager()
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        //maybe need distance filter?
+
     }
 
     @IBAction func submitNote(_ sender: UIButton) {
@@ -35,13 +50,27 @@ class NewNoteViewController: UIViewController {
         //get context to create note object
         let dbContext =  (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let note = Note(context:dbContext)
+        
         note.text = text
+        note.latitude = Float(currentLocation.latitude)
+        note.longitude = Float(currentLocation.longitude)
+        
         //save note
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
+        //pop viewcontroller off stack
         let _ = navigationController?.popViewController(animated: true)
     }
 
     
+    //get location when user changes location authorization
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            currentLocation = (manager.location?.coordinate)!
+        }
+        else {
+            currentLocation = OSUCoordinate
+        }
+    }
 
   }

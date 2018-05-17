@@ -21,15 +21,15 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDX-Fq-2T8">
                         <rect key="frame" x="8" y="8" width="304" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="30" id="bVe-vA-1dg"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOU-Dg-wdu">
                         <rect key="frame" x="8" y="38" width="304" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="6c6-O9-uom"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -42,6 +42,7 @@
                     <constraint firstItem="NDX-Fq-2T8" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Mm7-yj-14o"/>
                     <constraint firstItem="zOU-Dg-wdu" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="nkN-5P-vuQ"/>
                     <constraint firstAttribute="bottomMargin" secondItem="zOU-Dg-wdu" secondAttribute="bottom" constant="2" id="skG-gF-ObI"/>
+                    <constraint firstAttribute="topMargin" secondItem="NDX-Fq-2T8" secondAttribute="top" id="upe-EI-ydB"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
